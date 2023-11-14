@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
 import android.widget.Adapter;
+import android.widget.Toast;
 
 import com.example.appdecorativelight.Adapters.OrdersAdapter;
 import com.example.appdecorativelight.Models.OrdersModel;
@@ -22,6 +23,7 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityOrderBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        Toast.makeText(this, "My Orders", Toast.LENGTH_SHORT).show();
 
         DBHelper helper = new DBHelper(this);
         ArrayList<OrdersModel> list = helper.getOrders();

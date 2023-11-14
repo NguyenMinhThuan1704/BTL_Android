@@ -25,11 +25,10 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        Toast.makeText(this, "Chi tiết sản phẩm", Toast.LENGTH_SHORT).show();
 
-        // Khai báo biến
         Toolbar tlb = (Toolbar) findViewById(R.id.toolbar);
 
-        // Gán vào biến
         setSupportActionBar(tlb);
 
         if (getIntent().getIntExtra("type", 0) == 1) {
@@ -44,25 +43,29 @@ public class DetailActivity extends AppCompatActivity {
             binding.nameProduct.setText(lightname);
             binding.detailDescription.setText(description);
 
-
             binding.insertBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    String name = binding.nameBox.getText().toString();
+                    String phone = binding.phoneBox.getText().toString();
+                    if (name.equals("") || phone.equals(""))
+                        Toast.makeText(DetailActivity.this, "Tất cả các trường là bắt buộc", Toast.LENGTH_SHORT).show();
+                    else {
+                        boolean isInserted = helper.insertOrder(
+                                binding.nameBox.getText().toString(),
+                                binding.phoneBox.getText().toString(),
+                                price,
+                                image,
+                                description,
+                                lightname,
+                                Integer.parseInt(binding.quantity.getText().toString())
+                        );
 
-                    boolean isInserted = helper.insertOrder(
-                            binding.nameBox.getText().toString(),
-                            binding.phoneBox.getText().toString(),
-                            price,
-                            image,
-                            description,
-                            lightname,
-                            Integer.parseInt(binding.quantity.getText().toString())
-                    );
-
-                    if (isInserted)
-                        Toast.makeText(DetailActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
-                    else
-                        Toast.makeText(DetailActivity.this, "Lỗi", Toast.LENGTH_SHORT).show();
+                        if (isInserted)
+                            Toast.makeText(DetailActivity.this, "Mua thành công", Toast.LENGTH_SHORT).show();
+                        else
+                            Toast.makeText(DetailActivity.this, "Lỗi", Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
         } else {
@@ -75,7 +78,6 @@ public class DetailActivity extends AppCompatActivity {
 
             binding.nameProduct.setText(cursor.getString(7));
             binding.detailDescription.setText(cursor.getString(6));
-//            Toast.makeText(this, cursor.getString(1), Toast.LENGTH_SHORT).show();
 
             binding.nameBox.setText(cursor.getString(1));
             binding.phoneBox.setText(cursor.getString(2));
@@ -83,26 +85,31 @@ public class DetailActivity extends AppCompatActivity {
             binding.insertBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    boolean isUpdated = helper.updateOrder(
-                            binding.nameBox.getText().toString(),
-                            binding.phoneBox.getText().toString(),
-                            Integer.parseInt(binding.priceLbl.getText().toString()),
-                            image,
-                            binding.detailDescription.getText().toString(),
-                            binding.nameProduct.getText().toString(),
-                            Integer.parseInt(binding.quantity.getText().toString()),
-                            id
-                    );
-                    if (isUpdated)
-                        Toast.makeText(DetailActivity.this, "Cập nhật thành công", Toast.LENGTH_SHORT).show();
-                    else
-                        Toast.makeText(DetailActivity.this, "Cập nhật thất bại", Toast.LENGTH_SHORT).show();
+                    String name = binding.nameBox.getText().toString();
+                    String phone = binding.phoneBox.getText().toString();
+                    if (name.equals("") || phone.equals(""))
+                        Toast.makeText(DetailActivity.this, "Tất cả các trường là bắt buộc", Toast.LENGTH_SHORT).show();
+                    else {
+                        boolean isUpdated = helper.updateOrder(
+                                binding.nameBox.getText().toString(),
+                                binding.phoneBox.getText().toString(),
+                                Integer.parseInt(binding.priceLbl.getText().toString()),
+                                image,
+                                binding.detailDescription.getText().toString(),
+                                binding.nameProduct.getText().toString(),
+                                Integer.parseInt(binding.quantity.getText().toString()),
+                                id
+                        );
+                        if (isUpdated)
+                            Toast.makeText(DetailActivity.this, "Cập nhật thành công", Toast.LENGTH_SHORT).show();
+                        else
+                            Toast.makeText(DetailActivity.this, "Cập nhật thất bại", Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
-
         }
-
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
