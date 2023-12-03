@@ -28,8 +28,8 @@ public class DetailActivity extends AppCompatActivity {
         Toast.makeText(this, "Chi tiết sản phẩm", Toast.LENGTH_SHORT).show();
 
         Toolbar tlb = (Toolbar) findViewById(R.id.toolbar);
-
         setSupportActionBar(tlb);
+        int giaBanDau;
 
         if (getIntent().getIntExtra("type", 0) == 1) {
 
@@ -43,6 +43,27 @@ public class DetailActivity extends AppCompatActivity {
             binding.nameProduct.setText(lightname);
             binding.detailDescription.setText(description);
 
+            final int[] soLuong = {1}; // Số lượng ban đầu
+            giaBanDau = Integer.parseInt(getIntent().getStringExtra("price"));
+
+            binding.add.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    soLuong[0]++;
+                    capNhatSoLuongVaGia(soLuong[0], giaBanDau);
+                }
+            });
+
+            binding.minus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (soLuong[0] > 1) {
+                        soLuong[0]--;
+                        capNhatSoLuongVaGia(soLuong[0], giaBanDau);
+                    }
+                }
+            });
+
             binding.insertBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -51,19 +72,21 @@ public class DetailActivity extends AppCompatActivity {
                     if (name.equals("") || phone.equals(""))
                         Toast.makeText(DetailActivity.this, "Tất cả các trường là bắt buộc", Toast.LENGTH_SHORT).show();
                     else {
+                        int giaTong = Integer.parseInt(binding.priceLbl.getText().toString()); // Lấy giá đã tính toán
                         boolean isInserted = helper.insertOrder(
                                 binding.nameBox.getText().toString(),
                                 binding.phoneBox.getText().toString(),
-                                price,
+                                giaTong,
                                 image,
                                 description,
                                 lightname,
                                 Integer.parseInt(binding.quantity.getText().toString())
                         );
 
-                        if (isInserted)
+                        if (isInserted) {
                             Toast.makeText(DetailActivity.this, "Mua thành công", Toast.LENGTH_SHORT).show();
-                        else
+                            startActivity(new Intent(DetailActivity.this, MainActivity.class));
+                        } else
                             Toast.makeText(DetailActivity.this, "Lỗi", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -82,6 +105,27 @@ public class DetailActivity extends AppCompatActivity {
             binding.nameBox.setText(cursor.getString(1));
             binding.phoneBox.setText(cursor.getString(2));
             binding.insertBtn.setText("Cập nhật");
+
+            final int[] soLuong = {Integer.parseInt(binding.quantity.getText().toString())};
+            giaBanDau = Integer.parseInt(binding.priceLbl.getText().toString()) / soLuong[0];
+
+            binding.add.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    soLuong[0]++;
+                    capNhatSoLuongVaGia(soLuong[0], giaBanDau);
+                }
+            });
+
+            binding.minus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (soLuong[0] > 1) {
+                        soLuong[0]--;
+                        capNhatSoLuongVaGia(soLuong[0], giaBanDau);
+                    }
+                }
+            });
             binding.insertBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -100,8 +144,9 @@ public class DetailActivity extends AppCompatActivity {
                                 Integer.parseInt(binding.quantity.getText().toString()),
                                 id
                         );
-                        if (isUpdated)
+                        if (isUpdated){
                             Toast.makeText(DetailActivity.this, "Cập nhật thành công", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(DetailActivity.this, OrderActivity.class));}
                         else
                             Toast.makeText(DetailActivity.this, "Cập nhật thất bại", Toast.LENGTH_SHORT).show();
                     }
@@ -110,19 +155,32 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
+    private void capNhatSoLuongVaGia(int soLuong, int giaBanDau) {
+        binding.quantity.setText(String.valueOf(soLuong));
+
+        // Cập nhật giá dựa trên giá ban đầu
+        int giaTong = giaBanDau * soLuong;
+        binding.priceLbl.setText(String.valueOf(giaTong));
+
+        // Cập nhật giá trong trường hợp bạn đang ở trang hóa đơn
+        if (getIntent().getIntExtra("type", 0) != 1) {
+            binding.priceLbl.setText(String.valueOf(giaTong));
+        }
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.menu_detail, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.orders)
-            Toast.makeText(DetailActivity.this, "My Orders", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(DetailActivity.this, OrderActivity.class));
+        if (id == R.id.detail_home)
+            startActivity(new Intent(DetailActivity.this, MainActivity.class));
+        if (id == R.id.detail_orders)
+            startActivity(new Intent(DetailActivity.this, OrderActivity.class));
         return super.onOptionsItemSelected(item);
     }
-
 }
