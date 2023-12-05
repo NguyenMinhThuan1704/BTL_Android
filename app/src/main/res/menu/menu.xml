@@ -4,6 +4,12 @@
     <item
         android:id="@+id/orders"
         android:title="My Orders"
+        android:icon="@drawable/baseline_assignment_24"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/orders1"
+        android:title="My Orders"
         app:showAsAction="always"
         />
 

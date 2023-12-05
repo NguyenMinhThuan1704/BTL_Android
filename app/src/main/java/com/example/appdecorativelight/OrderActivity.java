@@ -52,7 +52,7 @@ public class OrderActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.menu_orders)
+        if (id == R.id.menu_orders ||id == R.id.menu_orders1)
             startActivity(new Intent(OrderActivity.this, MainActivity.class));
         return super.onOptionsItemSelected(item);
     }

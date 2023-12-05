@@ -18,8 +18,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="100dp"
             android:padding="20dp">
+            <ImageView
+                android:layout_width="209dp"
+                android:layout_height="203dp"
+                android:src="@drawable/baseline_app_registration_24"></ImageView>
             <TextView
                 android:id="@+id/LoginRedirectText"
                 android:layout_width="wrap_content"

@@ -4,6 +4,12 @@
     <item
         android:id="@+id/menu_orders"
         android:title="Home"
+        android:icon="@drawable/baseline_home_24"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/menu_orders1"
+        android:title="Home"
         app:showAsAction="always"
         />
 </menu>
