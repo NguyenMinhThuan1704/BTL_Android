@@ -95,17 +95,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
-        MenuItem ordersItem = menu.findItem(R.id.orders);
-        ordersItem.setTitle("My Orders"); // Đặt title trực tiếp từ mã nguồn
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.orders || id == R.id.orders1)
+        if (id == R.id.orders)
+            startActivity(new Intent(MainActivity.this, MainActivity.class));
+        if (id == R.id.orders1)
+            startActivity(new Intent(MainActivity.this, IntroduceActivity.class));
+        if (id == R.id.orders2)
             startActivity(new Intent(MainActivity.this, OrderActivity.class));
-
         return super.onOptionsItemSelected(item);
     }
 }

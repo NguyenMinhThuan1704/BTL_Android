@@ -170,16 +170,18 @@ public class DetailActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_detail, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.detail_home)
+        if (id == R.id.orders)
             startActivity(new Intent(DetailActivity.this, MainActivity.class));
-        if (id == R.id.detail_orders)
+        if (id == R.id.orders1)
+            startActivity(new Intent(DetailActivity.this, IntroduceActivity.class));
+        if (id == R.id.orders2)
             startActivity(new Intent(DetailActivity.this, OrderActivity.class));
         return super.onOptionsItemSelected(item);
     }

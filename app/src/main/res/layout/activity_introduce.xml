@@ -1,90 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".IntroduceActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:title="Decorative Light App" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Decorative Light App" />
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="200dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10px"
-            android:background="@drawable/border_background"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="Đèn chùm"
-            android:textColor="@color/black"
-            android:textSize="26dp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            tools:listitem="@layout/sample_mainlight" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10px"
-            android:background="@drawable/border_background"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="Đèn thả"
-            android:textColor="@color/black"
-            android:textSize="26dp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            tools:listitem="@layout/sample_mainlight" />
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Chào mừng Quý khách đến với Thế Giới Ánh Sáng!"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10px"
-            android:background="@drawable/border_background"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="Đèn tường"
-            android:textColor="@color/black"
-            android:textSize="26dp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
-            tools:listitem="@layout/sample_mainlight" />
+            android:layout_marginBottom="16dp"
+            android:text="Trang website thương mại điện tử đèn trang trí https://thegioianhsang.vn thuộc quyền sở hữu của Công ty TNHH Trang trí nội thất Hưng Thành được thành lập vào ngày 22/09/2012 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp phép hoạt động." />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Với tiêu chí làm thỏa mãn nhu cầu hoàn thiện giá trị thẩm mỹ cho các công trình kiến trúc, xây dựng, chúng tôi đặt tính chuyên nghiệp, sự uy tín, tận tâm lên hàng đầu để phục vụ khách hàng." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Thế Giới Ánh Sáng hận hạnh được phục vụ Quý khách!"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Văn phòng công ty:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Đ/c: 8 Tân Khai, phường 4, Q. Tân Bình, Tp.HCM"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Điện thoại: (028) 6684 0229 - (028) 2245 8144"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hotline: "
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0123 456 789 ( Ms. Thuận)"
+                android:textColor="#4CAF50"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="thuanpro9b2gmail.com"
+                android:textColor="#4CAF50"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Website: "
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://thegioianhsang.vn"
+                android:textColor="#4CAF50"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -195,6 +243,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="HỖ TRỢ KHÁCH HÀNG"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
@@ -309,6 +358,7 @@
                     android:textColor="#6c757d"
                     android:textStyle="italic" />
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -387,5 +437,4 @@
         </LinearLayout>
 
     </LinearLayout>
-
-</androidx.core.widget.NestedScrollView>
+</ScrollView>

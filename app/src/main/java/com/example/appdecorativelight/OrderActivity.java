@@ -45,15 +45,19 @@ public class OrderActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_order, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.menu_orders ||id == R.id.menu_orders1)
+        if (id == R.id.orders)
             startActivity(new Intent(OrderActivity.this, MainActivity.class));
+        if (id == R.id.orders1)
+            startActivity(new Intent(OrderActivity.this, IntroduceActivity.class));
+        if (id == R.id.orders2)
+            startActivity(new Intent(OrderActivity.this, OrderActivity.class));
         return super.onOptionsItemSelected(item);
     }
 }

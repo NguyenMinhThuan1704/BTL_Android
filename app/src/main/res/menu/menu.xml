@@ -3,14 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/orders"
-        android:title="My Orders"
-        android:icon="@drawable/baseline_assignment_24"
-        app:showAsAction="always"
-        />
+        android:title="Trang chủ"/>
     <item
         android:id="@+id/orders1"
-        android:title="My Orders"
-        app:showAsAction="always"
-        />
+        android:title="Giới thiệu" />
+    <item
+        android:id="@+id/orders2"
+        android:title="Đơn hàng" />
 
 </menu>
