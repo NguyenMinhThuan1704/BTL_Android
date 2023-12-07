@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderActivity">
+    tools:context=".RefundActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
@@ -20,12 +20,282 @@
             android:theme="?attr/actionBarTheme"
             app:title="Decorative Light App" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/orderRecyclerView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="16dp"
-            tools:listitem="@layout/order_sample" />
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Công ty thực hiện đổi, trả hàng và hoàn tiền cho Quý khách trong những trường hợp sau:"
+                android:textSize="20sp"/>
+
+            <!-- Nội dung -->
+            <TextView
+                android:id="@+id/textViewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="* Điều kiện bắt buộc khi đổi, trả hàng:"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Phải có biên nhận mua hàng"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Quý khách chưa sử dụng qua"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Hàng còn đầy đủ các phụ kiện, bao bì, quà tặng (nếu có)"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="* Hàng được đổi trả khi:"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Hàng bị lỗi kỹ thuật do nhà sản xuất"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Giao sai số lượng, không đủ bộ như trong đơn hàng"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Không đúng mẫu mã, kiểu dáng như khách đặt hàng"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Sản phẩm bị trầy xước, bể vỡ, gỉ sét"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="* Khác hàng được đổi trả/hoàn tiền khi:"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  Sản phẩm trong kho không còn đủ số lượng để giao hàng cho khách."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="* Trường hợp không được đổi trả hàng: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Khách hàng tự làm hư hỏng sản phẩm khi lắp đặt và sử dụng không đúng kỹ thuật"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Thay đổi mẫu mã sản phẩm, số lượng không thông báo trước khi giao hàng."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Tự làm hư hỏng bao bì, trầy xước, sản phẩm đã được lắp đặt ..."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Khách hàng đã kiểm tra tình trạng hàng hóa, nhận hàng và không có phản hồi gì về sản phẩm trong vòng 24h."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="*Lưu ý"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Quy định đổi/trả sản phẩm sẽ được áp dụng trong thời gian 02 ngày tính từ ngày khách hàng chốt đơn hàng (hoặc nhận hàng hoặc đặt cọc hàng)"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="  - Việc đổi hàng, sửa chữa được thực hiện theo quy định của nhà cung cấp sản phẩm."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text=" Quý khách vui lòng kiểm tra hàng hóa và ký nhận tình trạng với Nhân viên giao hàng ngay khi nhận được hàng. Khi phát hiện một trong các trường hợp trên, Quý khách có thể trao đổi trực tiếp với Nhân viên giao hàng hoặc liên hệ ngay với showroom Quý khách đặt hàng."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text=""
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="CÔNG TY TNHH TRANG TRÍ NỘI THẤT DECORATIVE LIGHT"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Địa chỉ : 8 Tân Khai, Phường 4, Quận Tân Bình, TP.HCM"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Điện thoại : (028) 6684 0229 - (028) 2245 8144"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Email: thuanpro9b@gmail.com"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Website: thegioianhsang.vn"
+                android:textSize="16sp" />
+
+            <!-- Tiêu đề THÔNG TIN HỖ TRỢ KHÁC -->
+            <TextView
+                android:id="@+id/textViewSupportTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:lineHeight="30dp"
+                android:text="THÔNG TIN HỖ TRỢ KHÁC"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sp_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Bảo hành" />
+
+            <TextView
+                android:id="@+id/sp_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Quy định và hình thức thanh toán"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Vận chuyển giao nhận"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Bảo mật thông tin"
+                android:textSize="16sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,6 +309,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="CÔNG TY TNHH TTNT HƯNG THÀNH"
+                android:lineHeight="30dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -47,6 +318,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8 Tân Khai, Phường 4, Tân Bình, TP.HCM"
+                android:lineHeight="30dp"
                 android:textColor="#6c757d"
                 android:textSize="16sp" />
 
@@ -54,6 +326,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
                 android:layout_marginBottom="8dp"
                 android:text="(028) 6684 0229 - (028) 2245 8144"
                 android:textColor="@color/white"
@@ -66,6 +339,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:lineHeight="30dp"
                     android:layout_height="wrap_content"
                     android:text="Hotline + Zalo: "
                     android:textColor="#6c757d"
@@ -76,16 +350,19 @@
                     android:layout_height="wrap_content"
                     android:text="0123 456 789 ( Ms. Thuận)"
                     android:textColor="@color/white"
+                    android:lineHeight="30dp"
                     android:textStyle="italic" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lineHeight="25dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:lineHeight="30dp"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/baseline_email_24"
                     android:drawablePadding="8dp"
@@ -333,5 +610,7 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="20dp" />
         </LinearLayout>
+
     </LinearLayout>
+
 </ScrollView>

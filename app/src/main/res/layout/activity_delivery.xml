@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderActivity">
+    tools:context=".DeliveryActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
@@ -20,12 +20,128 @@
             android:theme="?attr/actionBarTheme"
             app:title="Decorative Light App" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/orderRecyclerView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="16dp"
-            tools:listitem="@layout/order_sample" />
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Tiêu đề ĐIỀU KIỆN BẢO HÀNH -->
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="VẬN CHUYỂN GIAO NHẬN"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Quý khách hàng ở nội thành trung tâm TP.HCM: Với đơn hàng đặt mua sản phẩm đèn trang trí có giá trị từ 1.500.000 VNĐ (Một triệu đồng) trở lên, Công ty miễn phí giao hàng trong nội thành cho Quý khách. Trường hợp đơn đặt hàng có giá trị thấp hơn 1.500.000 VNĐ (Một triệu đồng), Công ty sẽ tính phí giao hàng cho Quý Vị với chi phí được hỗ trợ. Hàng hóa sẽ được giao ngay trong ngày kể từ khi chúng tôi nhận được đơn hàng."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Quý Khách Hàng tại các tỉnh thành khác: Hàng hóa vận chuyển từ Thành phố Hồ Chí Minh, Hà Nội đến các Tỉnh/ Thành khác sẽ được giao theo sự chỉ định của Quý Khách Hàng hoặc theo tuyến cố định của Công ty. Công ty hỗ trợ đóng kiện an toàn và chuyển đến đơn vị chuyển phát trong thời gian nhanh nhất. Phí giao hàng được tính cho người mua hoặc theo thỏa thuận tùy theo đơn hàng."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="CÔNG TY TNHH TRANG TRÍ NỘI THẤT DECORATIVE LIGHT"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="Địa chỉ : 8 Tân Khai, Phường 4, Quận Tân Bình, TP.HCM"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="Điện thoại : (028) 6684 0229 - (028) 2245 8144"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="Email: thuanpro9b@gmail.com"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="Website: thegioianhsang.vn"
+                android:textSize="16sp" />
+
+            <!-- Tiêu đề THÔNG TIN HỖ TRỢ KHÁC -->
+            <TextView
+                android:id="@+id/textViewSupportTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:lineHeight="25dp"
+                android:text="THÔNG TIN HỖ TRỢ KHÁC"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sp_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="Bảo hành"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="Quy định và hình thức thanh toán"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="Đổi trả hàng và hoàn tiền"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="25dp"
+                android:layout_marginTop="8dp"
+                android:text="Bảo mật thông tin"
+                android:textSize="16sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,6 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="CÔNG TY TNHH TTNT HƯNG THÀNH"
+                android:lineHeight="25dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -47,6 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8 Tân Khai, Phường 4, Tân Bình, TP.HCM"
+                android:lineHeight="25dp"
                 android:textColor="#6c757d"
                 android:textSize="16sp" />
 
@@ -54,6 +172,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
                 android:layout_marginBottom="8dp"
                 android:text="(028) 6684 0229 - (028) 2245 8144"
                 android:textColor="@color/white"
@@ -66,6 +185,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:lineHeight="25dp"
                     android:layout_height="wrap_content"
                     android:text="Hotline + Zalo: "
                     android:textColor="#6c757d"
@@ -76,16 +196,19 @@
                     android:layout_height="wrap_content"
                     android:text="0123 456 789 ( Ms. Thuận)"
                     android:textColor="@color/white"
+                    android:lineHeight="25dp"
                     android:textStyle="italic" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lineHeight="25dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:lineHeight="25dp"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/baseline_email_24"
                     android:drawablePadding="8dp"
@@ -333,5 +456,7 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="20dp" />
         </LinearLayout>
+
     </LinearLayout>
+
 </ScrollView>

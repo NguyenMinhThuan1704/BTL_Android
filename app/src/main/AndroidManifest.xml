@@ -13,6 +13,21 @@
         android:theme="@style/Theme.AppDecorativeLight"
         tools:targetApi="31">
         <activity
+            android:name=".SecurityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RefundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeliveryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegulationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GuaranteeActivity"
+            android:exported="false" />
+        <activity
             android:name=".IntroduceActivity"
             android:exported="true" />
         <activity

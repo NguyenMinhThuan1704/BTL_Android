@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OrderActivity">
+    tools:context=".GuaranteeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
@@ -20,12 +20,243 @@
             android:theme="?attr/actionBarTheme"
             app:title="Decorative Light App" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/orderRecyclerView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="16dp"
-            tools:listitem="@layout/order_sample" />
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Tiêu đề ĐIỀU KIỆN BẢO HÀNH -->
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ĐIỀU KIỆN BẢO HÀNH"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Nội dung -->
+            <TextView
+                android:id="@+id/textViewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Chúng tôi cam kết bảo hành đối với các sản phẩm đèn do chính Công ty trực tiếp phân phối trên thị trường Việt Nam."
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="1/ Tất cả đèn trang trí sẽ được bảo hành miễn phí (kể từ ngày giao hàng). Việc bảo hành sẽ tuỳ theo từng trường hợp cụ thể mà chúng tôi sẽ thay mới hoàn toàn hoặc thay thế phụ tùng. "
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="2/ Thời gian bảo hành theo quy định của nhà sản xuất."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="30dp"
+                android:layout_marginTop="8dp"
+                android:text="3/ Sau thời hạn bảo hành, công ty sẽ hỗ trợ một phần chi phí sửa chữa cho khách hàng, phần còn lại sẽ do khách hành thanh toán. Trước khi tiến hành sửa chữa, nhân viên sẽ thông báo cho khách hàng cụ thể chi phí cần sửa chữa."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="4/ Công ty chỉ bảo hành những lỗi kỹ thuật gây ra trong quá trình sản xuất."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="5/ Công ty không chịu trách nhiệm với những lỗi sau:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Do lỗi chủ quan của người sử dụng."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Người sử dụng tuỳ ý mang đi sửa chữa ở những nơi khác không do Công ty chỉ định."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Hỏng do nguyên nhân bất khả kháng: hoả hoạn, thiên tai…"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Đèn đã bị khách hàng tự ý tháo gỡ, sửa chữa, làm rách tem bảo hành trên sản phẩm."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="- Các thông tin chi tiết trên sản phẩm không trùng khớp với thông tin lưu lại khi khách hàng liên hệ mua sản phẩm."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="6/ Địa điểm bảo hành: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="+ Tại 8 Tân Khai, Phường 4, Quận Tân Bình, TP. HCM: Công ty sẽ tiếp nhận và kiểm tra bảo hàng miễn phí cho khách hàng. Trong trường hợp hết thời hạn bảo hành hoặc khách hàng sử dụng sai công năng của đèn, công ty sẽ thông báo chi phí bảo hành trước khi sửa chữa đèn."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="+ Tại nhà khách hàng: Khách hàng cung cấp video, mô tả tình trạng đèn, hóa đơn mua hàng hoặc số điện thoại khi mua hàng hàng, công ty sẽ lên lịch hẹn đến bảo hành sản phẩm tại nhà khách và thu phí bảo hành tại nhà."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="25dp"
+                android:text="* Ngoài những lỗi nêu trên. Những lỗi do thông tin phản ánh không rõ ràng, chính xác hoặc chưa cập nhật kịp, chúng tôi sẽ Hỗ trợ khách hàng khắc phục sự cố với chi phí thấp nhất có thể."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="* Khi có sự cố, xin liên lạc ngay cho chúng tôi."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="CÔNG TY TNHH TRANG TRÍ NỘI THẤT DECORATIVE LIGHT"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Địa chỉ : 8 Tân Khai, Phường 4, Quận Tân Bình, TP.HCM"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Điện thoại : (028) 6684 0229 - (028) 2245 8144"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Email: thuanpro9b@gmail.com"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Website: thegioianhsang.vn"
+                android:textSize="16sp" />
+
+            <!-- Tiêu đề THÔNG TIN HỖ TRỢ KHÁC -->
+            <TextView
+                android:id="@+id/textViewSupportTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:lineHeight="30dp"
+                android:text="THÔNG TIN HỖ TRỢ KHÁC"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sp_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Quy định và hình thức thanh toán"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Vận chuyển giao nhận"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Đổi trả hàng và hoàn tiền"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="30dp"
+                android:layout_marginTop="8dp"
+                android:text="Bảo mật thông tin"
+                android:textSize="16sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,6 +270,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="CÔNG TY TNHH TTNT HƯNG THÀNH"
+                android:lineHeight="30dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -47,6 +279,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8 Tân Khai, Phường 4, Tân Bình, TP.HCM"
+                android:lineHeight="30dp"
                 android:textColor="#6c757d"
                 android:textSize="16sp" />
 
@@ -54,6 +287,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
                 android:layout_marginBottom="8dp"
                 android:text="(028) 6684 0229 - (028) 2245 8144"
                 android:textColor="@color/white"
@@ -66,6 +300,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:lineHeight="30dp"
                     android:layout_height="wrap_content"
                     android:text="Hotline + Zalo: "
                     android:textColor="#6c757d"
@@ -76,16 +311,19 @@
                     android:layout_height="wrap_content"
                     android:text="0123 456 789 ( Ms. Thuận)"
                     android:textColor="@color/white"
+                    android:lineHeight="30dp"
                     android:textStyle="italic" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lineHeight="25dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:lineHeight="30dp"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/baseline_email_24"
                     android:drawablePadding="8dp"
@@ -333,5 +571,7 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="20dp" />
         </LinearLayout>
+
     </LinearLayout>
+
 </ScrollView>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IntroduceActivity">
+    tools:context=".SecurityActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,115 +21,322 @@
             app:title="Decorative Light App" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:gravity="center"
-                android:text="Chào mừng Quý khách đến với Thế Giới Ánh Sáng!"
-                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="BẢO MẬT THÔNG TIN"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/textViewContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Trang website thương mại điện tử đèn trang trí https://thegioianhsang.vn thuộc quyền sở hữu của Công ty TNHH Trang trí nội thất Hưng Thành được thành lập vào ngày 22/09/2012 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp phép hoạt động." />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Với tiêu chí làm thỏa mãn nhu cầu hoàn thiện giá trị thẩm mỹ cho các công trình kiến trúc, xây dựng, chúng tôi đặt tính chuyên nghiệp, sự uy tín, tận tâm lên hàng đầu để phục vụ khách hàng." />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Thế Giới Ánh Sáng hận hạnh được phục vụ Quý khách!"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Văn phòng công ty:"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="1. Chính sách bảo vệ thông tin cá nhân"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Đ/c: 8 Tân Khai, phường 4, Q. Tân Bình, Tp.HCM"
-                android:textStyle="italic" />
+                android:lineHeight="30dp"
+                android:text="Chúng tôi không bán, chia sẻ hay trao đổi thông tin cá nhân của khách hàng thu thập trên trang web cho một bên thứ ba nào khác."
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Điện thoại: (028) 6684 0229 - (028) 2245 8144"
-                android:textStyle="italic" />
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Khi khách hàng giao dịch trên trang website, thông tin cá nhân mà chúng tôi thu nhập bao gồm:"
+                android:textSize="16sp" />
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Tên khách hàng"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hotline: "
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0123 456 789 ( Ms. Thuận)"
-                    android:textColor="#4CAF50"
-                    android:textStyle="italic" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Email"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Email: "
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="thuanpro9b2gmail.com"
-                    android:textColor="#4CAF50"
-                    android:textStyle="italic" />
-            </LinearLayout>
-
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Số điện thoại"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Website: "
-                    android:textStyle="italic" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Địa chỉ"
+                android:textSize="16sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="https://thegioianhsang.vn"
-                    android:textColor="#4CAF50"
-                    android:textStyle="italic" />
-            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Thông tin cá nhân của khách hàng sẽ chỉ được sử dụng trong nội bộ công ty nhằm phục vụ cho mục đích sau đây:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Thông báo về việc giao hàng và hỗ trợ khách hàng"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Xử lý đơn đặt hàng, cung cấp dịch vụ và thông tin qua trang web của chúng tôi theo yêu cầu của khách hàng"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="2. Quy định về quản lý/kiểm soát thông tin trên website"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Chúng tôi cam kết không bán, trao đổi hay chia sẻ thông tin dẫn đến việc làm lộ thông tin cá nhân của Khách hàng vì mục đích thương mại, vi phạm những cam kết được đặt ra trong Quy định chính sách bảo mật thông tin khách hàng."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Chúng tôi sẽ không chia sẻ thông tin Khách hàng trừ những trường hợp cụ thể như sau:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Theo yêu cầu pháp lý từ một cơ quan chính phủ hoặc khi chúng tôi tin rằng việc làm đó là cần thiết và phù hợp nhằm tuân theo các yêu cầu pháp lý."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Để bảo vệ thegoianhsang.vn và các bên thứ ba khác: Chúng tôi chỉ đưa ra thông tin cá nhân khác khi tin chắc rằng việc đưa những thông tin đó là phù hợp với luật pháp, bảo vệ quyền lợi, tài sản của người sử dụng dịch vụ trên thegioianhsang.vn và các bên thứ ba khác."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Trong những trường hợp còn lại, chúng tôi sẽ có thông báo cụ thể cho Khách hàng khi phải tiết lộ thông tin cho một bên thứ ba và thông tin này chỉ được cung cấp khi được sự phản hồi đồng ‎ý‎ từ phía Khách hàng."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="3. Phạm vi sử dụng thông tin"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Thông tin của khách hàng sẽ được thegioianhsang.vn sử dụng để phục vụ cho các hoạt động sau:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Xác nhận và giao hàng"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Gửi email giới thiệu sản phẩm mới và các chương trình khuyến mãi hấp dẫn nhất của công ty trên thegioianhsang.vn."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Giải quyết các vấn đề, tranh chấp phát sinh liên quan đến việc sử dụng dịch vụ"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="- Ngăn chặn những hoạt động vi phạm pháp luật Việt Nam."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="4. Thời gian lưu trữ thông tin"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Thegioianhsang.vn sẽ lưu trữ các thông tin cá nhân do khách hàng cung cấp trên các hệ thống nội bộ của chúng tôi trong quá trình cung cấp dịch vụ cho khách hàng hoặc cho đến khi hoàn thành mục đích thu thập hoặc khi Khách hàng có yêu cầu hủy các thông tin đã cung cấp."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="5. Địa chỉ của đơn vị thu thập và quản lý thông tin cá nhân"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Địa chỉ : 8 Tân Khai, Phường 4, Quận Tân Bình, TP.HCM"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Điện thoại : (028) 6684 0229 - (028) 2245 8144"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Email: thuanpro9b@gmail.com"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Website: thegioianhsang.vn"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="6. Phương tiện và công cụ để người dùng tiếp cận và chỉnh sửa dữ liệu cá nhân của mình"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Trang website không thiết lập chức năng đăng ký thành viên cho khách hàng."
+                android:textSize="16sp" />
+
+            <!-- Tiêu đề THÔNG TIN HỖ TRỢ KHÁC -->
+            <TextView
+                android:id="@+id/textViewSupportTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:lineHeight="30dp"
+                android:text="THÔNG TIN HỖ TRỢ KHÁC"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sp_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Bảo hành"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Quy định và hình thức thanh toán"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Vận chuyển giao nhận"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sp_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineHeight="30dp"
+                android:text="Đổi trả hàng và hoàn tiền"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -144,6 +351,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:lineHeight="30dp"
                 android:text="CÔNG TY TNHH TTNT HƯNG THÀNH"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
@@ -152,6 +360,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:lineHeight="30dp"
                 android:text="8 Tân Khai, Phường 4, Tân Bình, TP.HCM"
                 android:textColor="#6c757d"
                 android:textSize="16sp" />
@@ -161,6 +370,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:lineHeight="30dp"
                 android:text="(028) 6684 0229 - (028) 2245 8144"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
@@ -173,6 +383,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:lineHeight="30dp"
                     android:text="Hotline + Zalo: "
                     android:textColor="#6c757d"
                     android:textStyle="italic" />
@@ -180,6 +391,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:lineHeight="30dp"
                     android:text="0123 456 789 ( Ms. Thuận)"
                     android:textColor="@color/white"
                     android:textStyle="italic" />
@@ -188,6 +400,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lineHeight="25dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -196,6 +409,7 @@
                     android:drawableLeft="@drawable/baseline_email_24"
                     android:drawablePadding="8dp"
                     android:gravity="center_vertical"
+                    android:lineHeight="30dp"
                     android:textColor="@color/colorPrimary"
                     android:textSize="25dp" />
 

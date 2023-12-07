@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.example.appdecorativelight.Adapters.MainAdapter;
 import com.example.appdecorativelight.Adapters.SlideImageAdapter;
@@ -18,7 +20,7 @@ import androidx.viewpager.widget.ViewPager;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     ActivityMainBinding binding;
     private ViewPager viewPager;
     private SlideImageAdapter slideImageAdapter;
@@ -51,11 +53,20 @@ public class MainActivity extends AppCompatActivity {
                 handler.post(update);
             }
         }, 3000, 3000);
-        // Khai báo biến
-        Toolbar tlb = (Toolbar) findViewById(R.id.toolbar);
 
-        // Gán vào biến
+        Toolbar tlb = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(tlb);
+
+        TextView sp1 = findViewById(R.id.sp1);
+        TextView sp2 = findViewById(R.id.sp2);
+        TextView sp3 = findViewById(R.id.sp3);
+        TextView sp4 = findViewById(R.id.sp4);
+        TextView sp5 = findViewById(R.id.sp5);
+        sp1.setOnClickListener(this);
+        sp2.setOnClickListener(this);
+        sp3.setOnClickListener(this);
+        sp4.setOnClickListener(this);
+        sp5.setOnClickListener(this);
 
         ArrayList<MainModel> list = new ArrayList<>();
         list.add(new MainModel(R.drawable.denchum1, "Đèn chùm 1", "15", "Đèn treo phòng khách"));
@@ -108,5 +119,27 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.orders2)
             startActivity(new Intent(MainActivity.this, OrderActivity.class));
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        int viewId = view.getId();
+
+        if (viewId == R.id.sp1) {
+            openActivity(GuaranteeActivity.class);
+        } else if (viewId == R.id.sp2) {
+            openActivity(RegulationsActivity.class);
+        } else if (viewId == R.id.sp3) {
+            openActivity(DeliveryActivity.class);
+        } else if (viewId == R.id.sp4) {
+            openActivity(RefundActivity.class);
+        } else if (viewId == R.id.sp5) {
+            openActivity(SecurityActivity.class);
+        }
+    }
+
+    private void openActivity(Class<?> destinationActivity) {
+        Intent intent = new Intent(MainActivity.this, destinationActivity);
+        startActivity(intent);
     }
 }
